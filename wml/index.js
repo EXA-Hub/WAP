@@ -44,14 +44,7 @@ function saveChatMessage(message) {
     });
 }
 
-// Route to receive chat messages
-app.post('/chat', (req, res) => {
-    const message = { author: 'Anonymous', text: req.body.message };
-    saveChatMessage(message);
-    res.redirect('/http.wml');
-});
-
-app.get('/chat', (req, res) => {
+app.get('/chat.wml', (req, res) => {
     fs.readFile(chatFilePath, (err, data) => {
         if (err && err.code === 'ENOENT') {
             // If the file doesn't exist, send an empty chat page
