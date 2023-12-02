@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!DOCTYPE wml PUBLIC "-//WAPFORUM//DTD WML 1.1//EN" "http://www.wapforum.org/DTD/wml_1.1.xml">
+<wml>
+  <card id="chat" title="Global Chat" ontimer="/chat">
+    <p>Enter your message:
+    <input name="message" type="text" format="*M" /></p>
+    <do type="accept" label="Send">
+      <go method="post" href="http://localhost:3000/chat">
+        <postfield name="message" value="$(message)"/>
+      </go>
+    </do>
+    <p>Chat Messages:</p>
+    <p>
+      $(chatMessages)
+    </p>
+  </card>
+</wml>
