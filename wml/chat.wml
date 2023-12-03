@@ -10,7 +10,9 @@
     </do>
     <p>Chat Messages:</p>
     <p>
-      $(chatMessages)
+      Anonymous: node get sdse
+      Anonymous: node get sdses
+      Anonymous: node get biba
     </p>
   </card>
 </wml>
