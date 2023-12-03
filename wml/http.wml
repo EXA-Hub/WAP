@@ -5,7 +5,7 @@
     <p>Enter your message:
     <input name="message" type="text" format="*M" /></p>
     <do type="accept" label="Send">
-      <go method="get" href="http://192.168.222.1:3000/chat.wml?author=Anonymous&text=$(message)">
+      <go method="get" href="/chat.wml?author=Anonymous&text=$(message)">
       </go>
     </do>
     <p>Chat Messages:</p>

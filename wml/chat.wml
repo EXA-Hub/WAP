@@ -5,14 +5,16 @@
     <p>Enter your message:
     <input name="message" type="text" format="*M" /></p>
     <do type="accept" label="Send">
-      <go method="get" href="http://192.168.222.1:3000/chat.wml?author=Anonymous&text=$(message)">
+      <go method="get" href="/chat.wml?author=Anonymous&text=$(message)">
       </go>
     </do>
     <p>Chat Messages:</p>
     <p>
-      Anonymous: node get sdse
-      Anonymous: node get sdses
       Anonymous: node get biba
+      Anonymous: npm i express.js
+      Anonymous: npm i express.jsx
+      Anonymous: npm i express.ejs
+      Anonymous: npm i express
     </p>
   </card>
 </wml>

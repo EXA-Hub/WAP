@@ -11,10 +11,6 @@ const chatWmlFilePath = path.join(__dirname, 'chat.wml'); // Path for the new ch
 app.use(express.static('images'));
 app.use(express.urlencoded({ extended: true })); // To parse URL-encoded body
 
-app.get("/", (req, res) => {
-    res.send("Hello World!");
-});
-
 // Read the WML file and store its contents in a variable
 const wmlFilePath = path.join(__dirname, 'http.wml');
 const wmlPageTemplate = fs.readFileSync(wmlFilePath, 'utf8');
@@ -64,12 +60,6 @@ app.get('/chat.wml', (req, res) => {
             console.log("File sent successfully.");
         }
     });
-});
-
-
-app.get("/http.wml", (req, res) => {
-    res.type("text/vnd.wap.wml");
-    res.sendFile("http.wml", { root: __dirname });
 });
 
 app.listen(3000, () => {
