@@ -12,6 +12,9 @@ function executeAndSave(command, outputFile) {
             console.error(`Stderr: ${stderr}`);
             return;
         }
+        if (stdout) {
+            console.log(`Stdout: ${stdout}`);
+        }
         // Write the stdout to the output file
         fs.writeFile(outputFile, stdout, (err) => {
             if (err) {
@@ -24,8 +27,7 @@ function executeAndSave(command, outputFile) {
 }
 
 // Example usage
-const commandToExecute = 'node -h';
+const commandToExecute = 'commands';
 const outputFilePath = 'result.txt';
 
 executeAndSave(commandToExecute, outputFilePath);
-
