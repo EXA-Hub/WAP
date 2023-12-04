@@ -32,6 +32,7 @@ function saveChatWML(req) {
     // Check for query parameters to save a new message
     if (req.query.author && req.query.text) {
         const message = { author: req.query.author, text: req.query.text };
+        console.log(message.author + " \u001b[32m>\u001b[37m " + message.text);
         saveChatMessage(message);
     }
 
